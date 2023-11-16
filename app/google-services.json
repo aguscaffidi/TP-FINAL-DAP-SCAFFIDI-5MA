@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "746536739896",
+    "project_id": "appdap-cb775",
+    "storage_bucket": "appdap-cb775.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746536739896:android:818c3eb237de05526f32cd",
+        "android_client_info": {
+          "package_name": "com.example.feli"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkHX8E2otdByaWzfU99_c7ggfK8f6iQRE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph.xml"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/recyclerViewFragment"
+        android:name="com.example.feli.fragments.RecyclerViewFragment"
+        android:label="recycler_view_fragment"
+        tools:layout="@layout/recycler_view_fragment" >
+        <action
+            android:id="@+id/action_recyclerViewFragment_to_addPersonFragment"
+            app:destination="@id/addPersonFragment" />
+        <action
+            android:id="@+id/action_recyclerViewFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPersonFragment"
+        android:name="com.example.feli.fragments.AddPersonFragment"
+        android:label="fragment_add_person"
+        tools:layout="@layout/fragment_add_person" >
+        <action
+            android:id="@+id/action_addPersonFragment_to_recyclerViewFragment"
+            app:destination="@id/recyclerViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.example.feli.fragments.UserInfoFragment"
+        android:label="user_info_fragment"
+        tools:layout="@layout/user_info_fragment" >
+        <argument
+            android:name="personaInfo"
+            app:argType="com.example.feli.Persona" />
+        <action
+            android:id="@+id/action_userInfoFragment_to_recyclerViewFragment"
+            app:destination="@id/recyclerViewFragment" />
+        <action
+            android:id="@+id/action_userInfoFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.feli.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_recyclerViewFragment"
+            app:destination="@id/recyclerViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.feli.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.feli.fragments.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.feli.fragments.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <argument
+            android:name="userInfo"
+            app:argType="com.example.feli.Persona" />
+        <action
+            android:id="@+id/action_editFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+    </fragment>
+</navigation>

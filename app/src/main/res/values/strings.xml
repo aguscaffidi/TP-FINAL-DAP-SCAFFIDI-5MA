@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CharacterLogger</string>
+    <string name="Email">Email</string>
+    <string name="nombre">nombre</string>
+    <string name="edad">edad</string>
+    <string name="curso">curso</string>
+    <string name="Descripcion">Descripcion</string>
+</resources>
